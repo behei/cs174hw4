@@ -72,4 +72,20 @@ class Sheet extends Model
             $this->id_valid = true; // id is aight
         }
     }
+    //method used to insert sheets into the database
+    public function insertSheetIntoDB()
+    {
+
+    }
+    //method used to retrieve sheet's ID
+    public function returnID ($mysqli, $name)
+    {
+
+    }
+    //method used to retrieve the data from the DB
+    public function returnData ($mysqli, $name)
+    {
+
+    }
+
 }
