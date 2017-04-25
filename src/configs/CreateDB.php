@@ -41,3 +41,10 @@ $tables = [
  `hash_code` VARCHAR (8) NOT NULL, `type` VARCHAR (4) NOT NULL, PRIMARY KEY (`id`))"
 
 ];
+
+foreach ($tables as $table){
+    print ("$table ;\n");
+    $outcome = \mysqli_query($db, $table);
+    print ("Result: $outcome \n");
+}
+$db->close();
