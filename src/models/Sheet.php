@@ -96,6 +96,17 @@ class Sheet extends Model
     //not sure if we need this tbh
     public function returnID($mysqli, $name)
     {
+        $sql = "SELECT id FROM `sheet` WHERE name='$name'";
+        if ($mysqli->query($sql) == true)
+        {
+            $row = $mysqli->query($sql)->fetch_assoc();
+            $id = $row["id"];
+            if (empty($id))
+                $id = -1;
+            $mysqli->query($sql)->free();
+        }
+
+        return $id;
 
     }
 
