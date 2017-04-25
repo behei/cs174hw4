@@ -12,7 +12,7 @@ namespace HMRTeam\hw4\models;
 class Sheet_Code extends Model
 {
     public $sheet_id;
-    public $sheet_name;
+    //public $sheet_name;
     public $hash_code_sheet;
     public $code_type;
     public $sheet_id_valid;
@@ -31,18 +31,20 @@ class Sheet_Code extends Model
 
     //to add a new spreadsheet, we need instantiate all the fields
 
-    public function createNewSheet($sheet_id, $sheet_name, $hash_code_sheet, $code_type)
+    public function createNewSheet($sheet_id, $hash_code_sheet, $code_type)
     {
         $this->sheet_id = $sheet_id;
-        $this->sheet_name = $sheet_name;
+        //$this->sheet_name = $sheet_name;
         $this->hash_code_sheet = $hash_code_sheet;
         $this->code_type = $code_type;
 
         //need to access db at this point
-        $db = parent::connectTO("db");
+        $db = parent::connectTO("spreadsheet");
         if ($db->connect_errno) {
             print("error");
         }
+
+
         //here we have to setup the method to assign the ID
         //first we get the ID from the DB and set it to equal to our sheet id
         //and put data into the database
@@ -56,5 +58,13 @@ class Sheet_Code extends Model
         } else {
             $this->sheet_id_valid = true;
         }
+
+        $sql = "INSERT INTO spreadsheet ($this->sheet_id, $this->hash_code_sheet, $this->code_type) VALUES ($this->sheet_id, $this->hash_code_sheet, $this->code_type)";
+
+        if ($db->query($sql)){
+            echo "Successful insert";
+        }
+        else
+            echo "Insert failed";
     }
 }
