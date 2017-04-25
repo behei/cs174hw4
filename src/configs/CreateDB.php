@@ -31,14 +31,15 @@ if ($db->query($dbCreate) == true) {
 
 
 /**
- * adding actual datatables
+ * adding actual data tables
+ * some random comment
  */
 
 $tables = [
     "CREATE TABLE `sheet` (`id` INT NOT NULL AUTO_INCREMENT, `data` VARCHAR (100) NOT NULL
  ,PRIMARY KEY `id`)",
     "CREATE TABLE `sheet_code` (id INT NOT NULL AUTO_INCREMENT, sheet_id INT NOT NULL, sheet_name VARCHAR (100) NOT NULL,
- `hash_code` VARCHAR (8) NOT NULL, `type` VARCHAR (4) NOT NULL, PRIMARY KEY (`id`))"
+ `sheet_hash_code` VARCHAR (8) NOT NULL, `type` VARCHAR (4) NOT NULL, PRIMARY KEY (`id`))"
 
 ];
 
