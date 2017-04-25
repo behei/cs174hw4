@@ -23,6 +23,7 @@ class Sheet extends Model
     public function existingSheet ($sheet_name)
     {
         $this->sheet_name = $sheet_name;
+        $this->retrieveSheet(); //sheet already exists
         //here we would probably call a method to get data about existing sheet
     }
 
@@ -30,10 +31,11 @@ class Sheet extends Model
 
     public function createSheet ($sheet_name, $data)
     {
+        //$this->sheet_id = $sheet_id;
         $this->sheet_name=$sheet_name;
         $this->data = $data;
         //in here we need something to instantiate a new sheet
-
+        $this->insertSheetIntoDB();
         //connection to the database
         $mysqli = parent::connectTO("db");
 
@@ -44,6 +46,12 @@ class Sheet extends Model
         }
 
         //we need to handle the IDs in here somehow
+
+
+        if ($this->id < 0 )
+            $this->sheet_id_valid = false;
+        else
+            $this->sheet_id_valid = true;
 
     }
 
@@ -78,7 +86,7 @@ class Sheet extends Model
     //method used to insert sheets into the database
     public function insertSheetIntoDB()
     {
-        $mysqli = parent::connectTO("db");
+        $mysqli = parent::connectTO("spreadsheet");
 
         $sql = "INSERT INTO spreadsheet ($this->id, $this->sheet_name, $this->data) VALUES ($this->id, $this->sheet_name, $this->data)";
         if ($mysqli->query($sql) == true)
