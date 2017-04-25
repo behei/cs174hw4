@@ -80,6 +80,12 @@ class Sheet extends Model
     {
         $mysqli = parent::connectTO("db");
 
+        $sql = "INSERT INTO db ($this->id, $this->sheet_name, $this->data, $this->hash_codes) VALUES ($this->id, $this->sheet_name, $this->data, $this->hash_codes)";
+        if ($mysqli->query($sql) == true)
+            echo "New record created";
+        else
+            echo "ERROR: " . $sql . "<br>" . $mysqli->connect_errno;
+
         $mysqli->close();
     }
     //method used to retrieve sheet's ID
