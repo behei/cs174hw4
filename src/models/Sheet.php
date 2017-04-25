@@ -9,11 +9,11 @@
 namespace HMRTeam\hw4\models;
 class Sheet extends Model
 {
-    public $id;
+    public $sheet_id;
     public $data;
-    public $hash_codes;
+    //public $hash_codes;
     public $sheet_name;
-    public $id_valid;
+    public $sheet_id_valid;
 
     public function __construct()
     {
@@ -62,15 +62,15 @@ class Sheet extends Model
 
         // here we need a method to get an ID from the database
 
-        if ($this->id < 0)
+        if ($this->sheet_id < 0)
         {
-            $this->id_valid = false;
+            $this->sheet_id_valid = false;
             print ("can't be less than 0");
         }
 
         else
         {
-            $this->id_valid = true; // id is aight
+            $this->sheet_id_valid = true; // id is aight
         }
 
         $mysqli->close();
@@ -80,7 +80,7 @@ class Sheet extends Model
     {
         $mysqli = parent::connectTO("db");
 
-        $sql = "INSERT INTO db ($this->id, $this->sheet_name, $this->data, $this->hash_codes) VALUES ($this->id, $this->sheet_name, $this->data, $this->hash_codes)";
+        $sql = "INSERT INTO spreadsheet ($this->id, $this->sheet_name, $this->data) VALUES ($this->id, $this->sheet_name, $this->data)";
         if ($mysqli->query($sql) == true)
             echo "New record created";
         else
