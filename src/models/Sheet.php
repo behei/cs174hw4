@@ -80,9 +80,6 @@ class Sheet extends Model
     {
         $mysqli = parent::connectTO("db");
 
-
-
-
         $mysqli->close();
     }
     //method used to retrieve sheet's ID
