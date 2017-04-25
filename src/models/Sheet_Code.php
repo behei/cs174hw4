@@ -40,8 +40,7 @@ class Sheet_Code extends Model
 
         //need to access db at this point
         $db = parent::connectTO("db");
-        if ($db->connect_errno)
-        {
+        if ($db->connect_errno) {
             print("error");
         }
         //here we have to setup the method to assign the ID
@@ -52,11 +51,9 @@ class Sheet_Code extends Model
         //$this-> //method to put sheet_id, sheet_name, hash_code_sheet into db
 
         //handle bad ID here
-        if ($this->sheet_id <0)
-        {
+        if ($this->sheet_id < 0) {
             $this->sheet_id_valid = false;
-        }
-        else{
+        } else {
             $this->sheet_id_valid = true;
         }
     }
