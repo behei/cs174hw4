@@ -20,7 +20,7 @@ class Sheet extends Model
         parent::__construct();
     }
 
-    public function existingSheet ($sheet_name)
+    public function existingSheet($sheet_name)
     {
         $this->sheet_name = $sheet_name;
         $this->retrieveSheet(); //sheet already exists
@@ -29,10 +29,10 @@ class Sheet extends Model
 
     //if we have a new sheet
 
-    public function createSheet ($sheet_name, $data)
+    public function createSheet($sheet_name, $data)
     {
         //$this->sheet_id = $sheet_id;
-        $this->sheet_name=$sheet_name;
+        $this->sheet_name = $sheet_name;
         $this->data = $data;
         //in here we need something to instantiate a new sheet
         $this->insertSheetIntoDB();
@@ -40,15 +40,14 @@ class Sheet extends Model
         $mysqli = parent::connectTO("db");
 
         //handle connection failure
-        if ($mysqli->connect_errno)
-        {
+        if ($mysqli->connect_errno) {
             print ("failed to connect");
         }
 
         //we need to handle the IDs in here somehow
 
 
-        if ($this->id < 0 )
+        if ($this->sheet_id < 0)
             $this->sheet_id_valid = false;
         else
             $this->sheet_id_valid = true;
@@ -57,54 +56,60 @@ class Sheet extends Model
 
 
     //method to get data about existing sheet
-    public function retrieveSheet ()
+    public function retrieveSheet()
     {
         //connect to database
         $mysqli = parent::connectTO("db"); //connect to db
 
         //handle error
-        if ($mysqli->connect_errno)
-        {
+        if ($mysqli->connect_errno) {
             print ("connection error");
         }
 
         // here we need a method to get an ID from the database
 
-        if ($this->sheet_id < 0)
-        {
+        if ($this->sheet_id < 0) {
             $this->sheet_id_valid = false;
             print ("can't be less than 0");
-        }
-
-        else
-        {
+        } else {
             $this->sheet_id_valid = true; // id is aight
         }
 
         $mysqli->close();
     }
+
     //method used to insert sheets into the database
     public function insertSheetIntoDB()
     {
         $mysqli = parent::connectTO("spreadsheet");
 
         $sql = "INSERT INTO spreadsheet ($this->id, $this->sheet_name, $this->data) VALUES ($this->id, $this->sheet_name, $this->data)";
-        if ($mysqli->query($sql) == true)
-            echo "New record created";
-        else
+        if ($mysqli->query($sql) == true) {
+            $last_id = $mysqli->insert_id;
+            echo "New record created. Last ID" . $last_id;
+        } else
             echo "ERROR: " . $sql . "<br>" . $mysqli->connect_errno;
 
         $mysqli->close();
     }
-    //method used to retrieve sheet's ID
-    public function returnID ($mysqli, $name)
+
+    //not sure if we need this tbh
+    public function returnID($mysqli, $name)
     {
 
     }
-    //method used to retrieve the data from the DB
-    public function returnData ($mysqli, $name)
-    {
 
+    //method used to retrieve the data from the DB
+    public function returnData($mysqli, $name)
+    {
+        $sql = "SELECT data FROM `sheet` WHERE name='$name'";
+        if ($mysqli->query($sql) == true)
+        {
+            $row = $mysqli->query($sql)->fetch_assoc();
+            $data = $row["data"];
+        }
+
+        return $data;
     }
 
 }
