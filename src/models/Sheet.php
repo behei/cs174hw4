@@ -6,6 +6,7 @@
  * Time: 10:17 AM
  */
 
+namespace HMRTeam\hw4\models;
 class Sheet extends Model
 {
     public $id;
@@ -71,11 +72,18 @@ class Sheet extends Model
         {
             $this->id_valid = true; // id is aight
         }
+
+        $mysqli->close();
     }
     //method used to insert sheets into the database
     public function insertSheetIntoDB()
     {
+        $mysqli = parent::connectTO("db");
 
+
+
+
+        $mysqli->close();
     }
     //method used to retrieve sheet's ID
     public function returnID ($mysqli, $name)
