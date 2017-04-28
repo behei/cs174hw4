@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'HMR\\hw4\\views' => array($baseDir . '/src/views'),
-    'HMR\\hw4\\models' => array($baseDir . '/src/models'),
-    'HMR\\hw4\\controllers' => array($baseDir . '/src/controllers'),
-    'HMR\\hw4\\configs' => array($baseDir . '/src/configs'),
+    'HMRTeam\\hw4\\views\\' => array($baseDir . '/src/views'),
+    'HMRTeam\\hw4\\models\\' => array($baseDir . '/src/models'),
+    'HMRTeam\\hw4\\controllers\\' => array($baseDir . '/src/controllers'),
+    'HMRTeam\\hw4\\configs\\' => array($baseDir . '/src/configs'),
 );

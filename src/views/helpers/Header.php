@@ -4,7 +4,7 @@
  * @author Hien Nguyen
  * @author Richard Lack
  */
-
+namespace HMRTeam\hw4\views\layouts;
 require_once('Layout.php');
 
 class Header implements Layout {

@@ -38,7 +38,7 @@ $sql =
     "CREATE TABLE sheet (
   sheet_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
   sheet_name VARCHAR (255) NOT NULL,
-  sheet_data VARCHAR (255) NOT NULL
+  sheet_data text NOT NULL
   )";
 
 
@@ -48,7 +48,7 @@ else
     echo "error inserting table";
 
 
-$sql = "CREATE TABLE sheet_code (
+$sql = "CREATE TABLE sheet_codes (
       sheet_id INT(11) NOT NULL,
        hash_code VARCHAR (30) NOT NULL, 
        code_type int (11) NOT NULL

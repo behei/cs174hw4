@@ -5,7 +5,7 @@
  * Date: 4/20/17
  * Time: 2:19 AM
  */
-
+namespace HMRTeam\hw4\models;
 use \HMRTeam\hw4\configs as C;
 
 class Model
