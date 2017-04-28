@@ -8,6 +8,43 @@ class MainController {
         $view->render();
     }
     
+    public function update($sheet_id, $sheet_data, $hash1, $hash2, $hash3) {
+        $logger = new Helper();
+        $logger->logger("Visited edit page ");
+        $view = new updatesheet();
+        $view->render($sheet_id, $sheet_data, $hash1, $hash2, $hash3);
+    }
+
+    public function read($sheet_id, $sheet_data, $hash1, $hash2, $hash3) {
+        $logger = new Helper();
+        $logger->logger("Visited read page");
+        $view = new readsheet();
+        $view->render($sheet_id, $sheet_data, $hash1, $hash2, $hash3);
+    }
+
+    public function file($sheet_id, $sheet_data) {
+        $logger = new Helper();
+        $logger->logger("Visited file page");
+        $xml = '<?xml version="1.0" encoding="iso-8859-1"?>
+                <!DOCTYPE spreadsheet SYSTEM "spreadsheet.dtd">
+                <spreadsheet>
+                <title>' . $sheet_id . '</title>
+                <rows>';
+        $sheet_data =  json_decode($sheet_data);
+        foreach ($sheet_data as $rows) {
+            $xml.="<row>";
+            foreach ($rows as $element) {
+                $xml .="<element>".$element."</element>";
+                
+            }
+            $xml.="</row>";
+        }
+        $xml.="</rows>
+               </spreadsheet>";
+        $view = new filesheet();
+        $view->render($xml);
+    }
+    
     // if there was an error in finding sheet display this
     public function ifError($error, $data) {
         $logger = new Helper();
