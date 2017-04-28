@@ -19,7 +19,7 @@ if ($db->connect_error) {
 
 echo "successfully connection\n";
 
-$dbCreate = 'CREATE DATABASE IF NOT EXISTS' .Config::db;
+$dbCreate = 'CREATE DATABASE IF NOT EXISTS' . Config::db;
 
 if ($db->query($dbCreate) == true) {
     echo Config::db . " created \n";
@@ -32,18 +32,22 @@ if ($db->query($dbCreate) == true) {
 
 /**
  * adding actual data tables
- * some random comment
  */
 
 $tables = [
-    "CREATE TABLE `sheet` (`id` INT NOT NULL AUTO_INCREMENT, `data` VARCHAR (100) NOT NULL
- ,PRIMARY KEY `id`)",
-    "CREATE TABLE `sheet_code` (id INT NOT NULL AUTO_INCREMENT, sheet_id INT NOT NULL, sheet_name VARCHAR (100) NOT NULL,
- `sheet_hash_code` VARCHAR (8) NOT NULL, `type` VARCHAR (4) NOT NULL, PRIMARY KEY (`id`))"
+    "CREATE TABLE IF NOT EXISTS `sheet` (`sheet_id`(11) INT NOT NULL AUTO_INCREMENT,
+  `sheet_name` VARCHAR (255) NOT NULL,
+  `sheet_data` TEXT NOT NULL,
+ ,PRIMARY KEY `sheet_id`)",
+    "CREATE TABLE IF NOT EXISTS `sheet_code` (
+      `sheet_id` INT(11) NOT NULL,
+       `hash_code` VARCHAR (30) NOT NULL, 
+       `code_type` int (11) NOT NULL,
+      )"
 
 ];
 
-foreach ($tables as $table){
+foreach ($tables as $table) {
     print ("$table ;\n");
     $outcome = \mysqli_query($db, $table);
     print ("Result: $outcome \n");
