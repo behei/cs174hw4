@@ -59,9 +59,4 @@ if ($db->query($sql) == true)
 else
     echo "error inserting table";
 
-/*foreach ($tables as $table) {
-    print ("$table ;\n");
-    $outcome = \mysqli_query($db, $table);
-    print ("Result: $outcome \n");
-}*/
 $db->close();
