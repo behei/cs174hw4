@@ -55,4 +55,54 @@ class MainController {
 
             $this->ifError("Name Or Code can't be empty", NULL);
         }
+    }
+    // if user enters a hash code or name then find the sheet
+    public function getSheet() {
+        $logger = new Helper();
+
+        if (isset($_POST['spreadsheet']) && !empty($_POST['spreadsheet'])) {
+            $name = trim($_POST['spreadsheet']);
+            $var = $logger->checkName($name);
+           
+            if (!is_string($var)) {
+                $model = new sheet_code();
+                $result = $model->getCodeDetails($name);
+                
+                if (count($result) != 0) {
+                    $results = $model->getCodes($result[0]['sheet_id']);
+                    $codes;
+                    $code_type = "";
+                    foreach ($results as $r) {
+                        $codes [] = $r['hash_code'];
+                        if ($name == $r['hash_code']) {
+                            $code_type = $r['code_type'];
+                        }}
+                    
+                    if ($code_type == 0)
+                        $this->update($result[0]['sheet_name'], $result[0]['sheet_data'], $codes[0], $codes[1], $codes[2]);
+                    else if ($code_type == 1)
+                        $this->read($result[0]['sheet_name'], $result[0]['sheet_data'], $codes[0], $codes[1], $codes[2]);
+                    else if ($code_type == 2)
+                        $this->file($result[0]['sheet_name'], $result[0]['sheet_data']);
+                    else
+                        $this->update($result[0]['sheet_name'], $result[0]['sheet_data'], $codes[0], $codes[1], $codes[2]);
+                } else {
+                    
+                    // create a new sheet if it doesnt exist
+                    $result = $model->addSheet($name, '[[,],[,]]');
+                    $codes;
+                   
+                    foreach ($result as $result) {
+                        $codes[] = $result;
+                    }
+                    $this->update($name, '[[,],[,]]', $codes[0], $codes[1], $codes[2]);
+                }
+            } else {
+                // error
+                $this->ifError($var, $name);
+            }
+        } else {
+
+            $this->ifError("You must enter a valid name or code!", NULL);
+        }
     }}
