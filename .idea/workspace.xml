@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc3b8de7-639f-429a-9780-cfcbe229b103" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/Controller.php" />
+    <list default="true" id="dc3b8de7-639f-429a-9780-cfcbe229b103" name="Default" comment="added an update sheet model">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/elements/updatesheet.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/helpers/Footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/helpers/Header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/helpers/Layout.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/homework4.iml" afterPath="$PROJECT_DIR$/.idea/homework4.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/issues/issue3_database.txt" afterPath="$PROJECT_DIR$/issues/issue3_database.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/spreadsheet.js" afterPath="$PROJECT_DIR$/src/js/spreadsheet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/Controller.php" afterPath="$PROJECT_DIR$/src/controllers/Controller.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,54 +26,71 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="Config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/configs/Config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spreadsheet.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/spreadsheet.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2383">
-              <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1492712845000" expanded="true" signature="2951:2982" ph="..." />
-                <marker date="1492712845000" expanded="true" signature="3275:3308" ph="..." />
+                <element signature="e#7#87#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editPage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/editPage.php">
+      <file leaf-file-name="CreateDB.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/configs/CreateDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="301">
+              <caret line="34" column="3" lean-forward="false" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+              <folding>
+                <element signature="e#6#91#0#PHP" expanded="true" />
+                <marker date="1493381597000" expanded="true" signature="384:400" ph="CREATE TABLE... IF" />
+                <marker date="1493381597000" expanded="true" signature="683:828" ph="CREATE TABLE... sheet" />
+                <marker date="1493381597000" expanded="true" signature="951:1094" ph="CREATE TABLE... sheet_code" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spreadsheet.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/spreadsheet.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/layouts/layout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+              <folding>
+                <marker date="1493383077000" expanded="true" signature="89:2468" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="98:940" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="979:2468" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="1087:2435" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="1119:2389" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="1247:1603" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="1375:1500" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="1771:2335" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="1828:2316" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="1868:1934" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="1979:2054" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="2099:2174" ph="..." />
+                <marker date="1493383077000" expanded="true" signature="2219:2294" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spreadsheet.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/spreadsheet.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3375">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -81,44 +100,71 @@
       <file leaf-file-name="spreadsheet.dtd" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spreadsheet.dtd">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="issue3_database.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/issues/issue3_database.txt">
+      <file leaf-file-name="spreadsheet.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/spreadsheet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="4875">
+              <caret line="327" column="24" lean-forward="false" selection-start-line="327" selection-start-column="24" selection-end-line="327" selection-end-column="24" />
+              <folding>
+                <marker date="1493053396000" expanded="true" signature="2951:2982" ph="..." />
+                <marker date="1493053396000" expanded="true" signature="3275:3308" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/Model.php">
+      <file leaf-file-name="landing.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/elements/landing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="165">
+              <caret line="11" column="74" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="74" />
+              <folding>
+                <marker date="1493383342000" expanded="true" signature="323:574" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.txt">
+      <file leaf-file-name="readsheet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/elements/readsheet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="360">
+              <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+              <folding>
+                <marker date="1493383816000" expanded="true" signature="623:819" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatesheet.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/elements/updatesheet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding>
+                <element signature="e#6#91#0#PHP" expanded="true" />
+                <marker date="1493384069000" expanded="true" signature="524:663" ph="..." />
+                <marker date="1493384069000" expanded="true" signature="667:860" ph="..." />
+                <marker date="1493384069000" expanded="true" signature="980:1169" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mode</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,12 +172,30 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/issues/issue3_database.txt" />
-        <option value="$PROJECT_DIR$/src/js/spreadsheet.js" />
+        <option value="$PROJECT_DIR$/src/views/helpers/Layout.php" />
+        <option value="$PROJECT_DIR$/src/views/helpers/Header.php" />
+        <option value="$PROJECT_DIR$/src/views/helpers/Footer.php" />
+        <option value="$PROJECT_DIR$/src/views/landingPage.php" />
+        <option value="$PROJECT_DIR$/src/controllers/readSheetController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/controllers/apiController.php" />
+        <option value="$PROJECT_DIR$/src/controllers/Controller.php" />
+        <option value="$PROJECT_DIR$/src/js/spreadsheet.js" />
+        <option value="$PROJECT_DIR$/src/models/Model.php" />
+        <option value="$PROJECT_DIR$/src/models/Sheet_Code.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/src/models/Sheet.php" />
+        <option value="$PROJECT_DIR$/spreadsheet.dtd" />
+        <option value="$PROJECT_DIR$/src/configs/Config.php" />
+        <option value="$PROJECT_DIR$/src/configs/CreateDB.php" />
+        <option value="$PROJECT_DIR$/src/css/spreadsheet.min.css" />
+        <option value="$PROJECT_DIR$/src/views/layouts/layout.php" />
+        <option value="$PROJECT_DIR$/src/views/elements/landing.php" />
+        <option value="$PROJECT_DIR$/src/views/elements/readsheet.php" />
+        <option value="$PROJECT_DIR$/src/views/elements/updatesheet.php" />
       </list>
     </option>
   </component>
@@ -141,18 +205,28 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
     <include_path>
       <path value="" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/font-awesome/css" />
+      <path value="$PROJECT_DIR$/vendor/font-awesome/fonts" />
+      <path value="$PROJECT_DIR$/vendor/font-awesome/scss" />
+      <path value="$PROJECT_DIR$/vendor/bootstrap/css" />
+      <path value="$PROJECT_DIR$/vendor/font-awesome/less" />
+      <path value="$PROJECT_DIR$/vendor/bootstrap/fonts" />
+      <path value="$PROJECT_DIR$/vendor/bootstrap/js" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="566" />
-    <option name="y" value="43" />
-    <option name="width" value="854" />
-    <option name="height" value="757" />
+    <option name="x" value="665" />
+    <option name="y" value="23" />
+    <option name="width" value="775" />
+    <option name="height" value="797" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -169,7 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,20 +253,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="hw4" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hw4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hw4" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="composer.phar" />
-              <option name="myItemType" value="com.jetbrains.php.phar.PsiPharFileNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -227,6 +286,32 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elements" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw4" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -243,6 +328,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw4" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw4" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,12 +397,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -386,78 +505,374 @@
       <workItem from="1492551123231" duration="1305000" />
       <workItem from="1492554142771" duration="1102000" />
       <workItem from="1492642656866" duration="710000" />
-      <workItem from="1492679519350" duration="2598000" />
+      <workItem from="1492679519350" duration="5894000" />
+      <workItem from="1492753263182" duration="862000" />
+      <workItem from="1492757164604" duration="3031000" />
+      <workItem from="1493015972468" duration="5273000" />
+      <workItem from="1493103958916" duration="4877000" />
+      <workItem from="1493153706495" duration="4649000" />
+      <workItem from="1493347577929" duration="4783000" />
+      <workItem from="1493366124303" duration="47000" />
+      <workItem from="1493382102821" duration="1968000" />
     </task>
-    <task id="LOCAL-00001" summary="added (blank) CreateDB.php file">
-      <created>1492551307220</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00015" summary="updated main controllet">
+      <created>1492754736855</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1492551307220</updated>
+      <updated>1492754736855</updated>
     </task>
-    <task id="LOCAL-00002" summary="got rid off HTML code in index.php">
-      <created>1492551550437</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+    <task id="LOCAL-00016" summary="updated main controller">
+      <created>1492757184395</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1492551550437</updated>
+      <updated>1492757184395</updated>
     </task>
-    <task id="LOCAL-00003" summary="added issues folder">
-      <created>1492556084428</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+    <task id="LOCAL-00017" summary="adder footer that implements layout">
+      <created>1492757929095</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1492556084428</updated>
+      <updated>1492757929095</updated>
     </task>
-    <task id="LOCAL-00004" summary="attempt to setup composer based on online tutorial">
-      <created>1492679749662</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+    <task id="LOCAL-00018" summary="adder header that implements layout">
+      <created>1492757994335</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1492679749662</updated>
+      <updated>1492757994335</updated>
     </task>
-    <task id="LOCAL-00005" summary="moved code to src folder, added views and a model">
-      <created>1492680030190</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+    <task id="LOCAL-00019" summary="added interface layout">
+      <created>1492758018382</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1492680030190</updated>
+      <updated>1492758018382</updated>
     </task>
-    <task id="LOCAL-00006" summary="added readme.txt file with student ID info">
-      <created>1492680505595</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
+    <task id="LOCAL-00020" summary="implemented header file">
+      <created>1492758254716</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1492680505596</updated>
+      <updated>1492758254716</updated>
     </task>
-    <task id="LOCAL-00007" summary="issue 003">
-      <created>1492680642351</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
+    <task id="LOCAL-00021" summary="implemented footer file">
+      <created>1492758476085</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1492680642351</updated>
+      <updated>1492758476085</updated>
     </task>
-    <task id="LOCAL-00008" summary="have to make sure we decide on namespaces">
-      <created>1492711019003</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
+    <task id="LOCAL-00022" summary="dtd file implemented">
+      <created>1492765805287</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1492711019003</updated>
+      <updated>1492765805287</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00023" summary="changed the port to 3306">
+      <created>1493016152086</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1493016152086</updated>
+    </task>
+    <task id="LOCAL-00024" summary="started adding the database">
+      <created>1493016461740</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1493016461740</updated>
+    </task>
+    <task id="LOCAL-00025" summary="trying to set up database... idk if works or no though">
+      <created>1493017451509</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1493017451509</updated>
+    </task>
+    <task id="LOCAL-00026" summary="updated db">
+      <created>1493017813239</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1493017813239</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added required apiController file">
+      <created>1493017922688</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1493017922688</updated>
+    </task>
+    <task id="LOCAL-00028" summary="added a function to draw the spreadsheet in edit mode">
+      <created>1493052542099</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1493052542099</updated>
+    </task>
+    <task id="LOCAL-00029" summary="added read sheet">
+      <created>1493052756245</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1493052756245</updated>
+    </task>
+    <task id="LOCAL-00030" summary="added xhttp request">
+      <created>1493052883282</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1493052883282</updated>
+    </task>
+    <task id="LOCAL-00031" summary="added xhttp request">
+      <created>1493053427244</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1493053427244</updated>
+    </task>
+    <task id="LOCAL-00032" summary="updated configs">
+      <created>1493053852672</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1493053852673</updated>
+    </task>
+    <task id="LOCAL-00033" summary="a model should be done, I hope">
+      <created>1493054116385</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1493054116385</updated>
+    </task>
+    <task id="LOCAL-00034" summary="added a sheet model">
+      <created>1493054770596</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1493054770596</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added sheet code model">
+      <created>1493054789267</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1493054789267</updated>
+    </task>
+    <task id="LOCAL-00036" summary="updated the database">
+      <created>1493104099867</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1493104099867</updated>
+    </task>
+    <task id="LOCAL-00037" summary="adding the create/existing sheet model">
+      <created>1493105395115</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1493105395115</updated>
+    </task>
+    <task id="LOCAL-00038" summary="keep working on the sheet model">
+      <created>1493105734904</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1493105734904</updated>
+    </task>
+    <task id="LOCAL-00039" summary="set up some methods we might need for the model">
+      <created>1493105895837</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1493105895837</updated>
+    </task>
+    <task id="LOCAL-00040" summary="added some work into other model we supposed to implement">
+      <created>1493111353110</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1493111353110</updated>
+    </task>
+    <task id="LOCAL-00041" summary="added some work into Sheet model">
+      <created>1493111402192</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1493111402192</updated>
+    </task>
+    <task id="LOCAL-00042" summary="updated sheet_code model">
+      <created>1493143410213</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1493143410213</updated>
+    </task>
+    <task id="LOCAL-00043" summary="updated model">
+      <created>1493143432507</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1493143432507</updated>
+    </task>
+    <task id="LOCAL-00044" summary="added insert into DB">
+      <created>1493149775694</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1493149775694</updated>
+    </task>
+    <task id="LOCAL-00045" summary="didn't realize we do not need hash_code in here">
+      <created>1493150121274</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1493150121274</updated>
+    </task>
+    <task id="LOCAL-00046" summary="added insert into DB">
+      <created>1493150462829</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1493150462829</updated>
+    </task>
+    <task id="LOCAL-00047" summary="update the Sheet model to retrieve data and insert">
+      <created>1493153911754</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1493153911754</updated>
+    </task>
+    <task id="LOCAL-00048" summary="github test">
+      <created>1493155505123</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1493155505123</updated>
+    </task>
+    <task id="LOCAL-00049" summary="added method to retrieve Data">
+      <created>1493159899317</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1493159899317</updated>
+    </task>
+    <task id="LOCAL-00050" summary="added a return ID function">
+      <created>1493160109116</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1493160109116</updated>
+    </task>
+    <task id="LOCAL-00051" summary="updated spreadsheet">
+      <created>1493347634757</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1493347634758</updated>
+    </task>
+    <task id="LOCAL-00052" summary="updated the CreateDb file">
+      <created>1493348956908</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1493348956908</updated>
+    </task>
+    <task id="LOCAL-00053" summary="updated the database">
+      <created>1493350531301</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1493350531301</updated>
+    </task>
+    <task id="LOCAL-00054" summary="updated create db file">
+      <created>1493350680854</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1493350680854</updated>
+    </task>
+    <task id="LOCAL-00055" summary="trying to  add bootstrap to make it look nice for once">
+      <created>1493382168191</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1493382168192</updated>
+    </task>
+    <task id="LOCAL-00056" summary="added bootstrap css">
+      <created>1493382286958</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1493382286958</updated>
+    </task>
+    <task id="LOCAL-00057" summary="added bootstrap css">
+      <created>1493382320935</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1493382320935</updated>
+    </task>
+    <task id="LOCAL-00058" summary="added bootstrap css (external library)">
+      <created>1493382361724</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1493382361724</updated>
+    </task>
+    <task id="LOCAL-00059" summary="added layout with bootstrap">
+      <created>1493382430905</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1493382430905</updated>
+    </task>
+    <task id="LOCAL-00060" summary="added bootstrap but update it later too">
+      <created>1493383114272</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1493383114272</updated>
+    </task>
+    <task id="LOCAL-00061" summary="added a schema of how landing page might look like">
+      <created>1493383371091</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1493383371091</updated>
+    </task>
+    <task id="LOCAL-00062" summary="added a read sheet view">
+      <created>1493383858451</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1493383858451</updated>
+    </task>
+    <task id="LOCAL-00063" summary="added an updated sheet model">
+      <created>1493384085965</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1493384085965</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5715000" />
+    <option name="totallyTimeSpent" value="34501000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="566" y="43" width="854" height="757" extended-state="0" />
+    <frame x="665" y="23" width="775" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25058547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3037433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -465,11 +880,11 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -480,21 +895,105 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added (blank) CreateDB.php file" />
-    <MESSAGE value="got rid off HTML code in index.php" />
-    <MESSAGE value="added issues folder" />
-    <MESSAGE value="attempt to setup composer based on online tutorial" />
-    <MESSAGE value="moved code to src folder, added views and a model" />
-    <MESSAGE value="added readme.txt file with student ID info" />
-    <MESSAGE value="issue 003" />
-    <MESSAGE value="have to make sure we decide on namespaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="have to make sure we decide on namespaces" />
+    <MESSAGE value="keep working on the sheet model" />
+    <MESSAGE value="set up some methods we might need for the model" />
+    <MESSAGE value="added some work into other model we supposed to implement" />
+    <MESSAGE value="added some work into Sheet model" />
+    <MESSAGE value="updated sheet_code model" />
+    <MESSAGE value="updated model" />
+    <MESSAGE value="didn't realize we do not need hash_code in here" />
+    <MESSAGE value="added insert into DB" />
+    <MESSAGE value="update the Sheet model to retrieve data and insert" />
+    <MESSAGE value="github test" />
+    <MESSAGE value="added method to retrieve Data" />
+    <MESSAGE value="added a return ID function" />
+    <MESSAGE value="updated spreadsheet" />
+    <MESSAGE value="updated the CreateDb file" />
+    <MESSAGE value="updated the database" />
+    <MESSAGE value="updated create db file" />
+    <MESSAGE value="trying to  add bootstrap to make it look nice for once" />
+    <MESSAGE value="added bootstrap css" />
+    <MESSAGE value="added bootstrap css (external library)" />
+    <MESSAGE value="added layout with bootstrap" />
+    <MESSAGE value="added bootstrap but update it later too" />
+    <MESSAGE value="added a schema of how landing page might look like" />
+    <MESSAGE value="added a read sheet view" />
+    <MESSAGE value="added an update sheet model" />
+    <MESSAGE value="added an updated sheet model" />
+    <option name="LAST_COMMIT_MESSAGE" value="added an updated sheet model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/landingPage.php" />
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/spreadsheet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding>
+            <marker date="1493053396000" expanded="true" signature="2951:2982" ph="..." />
+            <marker date="1493053396000" expanded="true" signature="3275:3308" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/editPage.php" />
+    <entry file="file://$PROJECT_DIR$/spreadsheet.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/issues/issue3_database.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -507,7 +1006,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <marker date="1493381597000" expanded="true" signature="384:400" ph="CREATE TABLE... IF" />
+            <marker date="1493381597000" expanded="true" signature="683:828" ph="CREATE TABLE... sheet" />
+            <marker date="1493381597000" expanded="true" signature="951:1094" ph="CREATE TABLE... sheet_code" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -515,7 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -532,7 +1035,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <marker date="1493381597000" expanded="true" signature="384:400" ph="CREATE TABLE... IF" />
+            <marker date="1493381597000" expanded="true" signature="683:828" ph="CREATE TABLE... sheet" />
+            <marker date="1493381597000" expanded="true" signature="951:1094" ph="CREATE TABLE... sheet_code" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -548,7 +1056,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <marker date="1493381597000" expanded="true" signature="384:400" ph="CREATE TABLE... IF" />
+            <marker date="1493381597000" expanded="true" signature="683:828" ph="CREATE TABLE... sheet" />
+            <marker date="1493381597000" expanded="true" signature="951:1094" ph="CREATE TABLE... sheet_code" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -556,48 +1069,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/issues/0001_issue1.txt" />
-    <entry file="file://$PROJECT_DIR$/src/configs/CreateDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/landingPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/readPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/readPage.php" />
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,25 +1086,8 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/editPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spreadsheet.dtd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,27 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/spreadsheet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2383">
-          <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1492712845000" expanded="true" signature="2951:2982" ph="..." />
-            <marker date="1492712845000" expanded="true" signature="3275:3308" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -660,23 +1102,231 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/Controller.php">
+    <entry file="file://$PROJECT_DIR$/src/controllers/editSheetController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/readSheetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="465">
+          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/apiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_data/spread.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Sheet_Code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/landingPage.php" />
+    <entry file="file://$PROJECT_DIR$/src/views/editPage.php" />
+    <entry file="file://$PROJECT_DIR$/src/views/helpers/Layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/configs/Sheet_Code.php" />
+    <entry file="file://$PROJECT_DIR$/src/controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/helpers/Header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Sheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <marker date="1493160074000" expanded="true" signature="2045:2112" ph="INSERT INTO db... " />
+            <marker date="1493160074000" expanded="true" signature="2045:2119" ph="INSERT INTO db... " />
+            <marker date="1493160074000" expanded="true" signature="2045:2120" ph="INSERT INTO db... " />
+            <marker date="1493160074000" expanded="true" signature="2045:2163" ph="INSERT INTO db... " />
+            <marker date="1493160074000" expanded="true" signature="2532:2573" ph="SELECT id FR... sheet" />
+            <marker date="1493160074000" expanded="true" signature="2969:3012" ph="SELECT data sheet" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spreadsheet.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/spreadsheet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4875">
+          <caret line="327" column="24" lean-forward="false" selection-start-line="327" selection-start-column="24" selection-end-line="327" selection-end-column="24" />
+          <folding>
+            <marker date="1493053396000" expanded="true" signature="2951:2982" ph="..." />
+            <marker date="1493053396000" expanded="true" signature="3275:3308" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/configs/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/configs/CreateDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="34" column="3" lean-forward="false" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <marker date="1493381597000" expanded="true" signature="384:400" ph="CREATE TABLE... IF" />
+            <marker date="1493381597000" expanded="true" signature="683:828" ph="CREATE TABLE... sheet" />
+            <marker date="1493381597000" expanded="true" signature="951:1094" ph="CREATE TABLE... sheet_code" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/spreadsheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3375">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/spreadsheet.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/helpers/Footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/layouts/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+          <folding>
+            <marker date="1493383077000" expanded="true" signature="89:2468" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="98:940" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="979:2468" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="1087:2435" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="1119:2389" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="1247:1603" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="1375:1500" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="1771:2335" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="1828:2316" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="1868:1934" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="1979:2054" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="2099:2174" ph="..." />
+            <marker date="1493383077000" expanded="true" signature="2219:2294" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/elements/landing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="74" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="74" />
+          <folding>
+            <marker date="1493383342000" expanded="true" signature="323:574" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/elements/readsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding>
+            <marker date="1493383816000" expanded="true" signature="623:819" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/elements/updatesheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <marker date="1493384069000" expanded="true" signature="524:663" ph="..." />
+            <marker date="1493384069000" expanded="true" signature="667:860" ph="..." />
+            <marker date="1493384069000" expanded="true" signature="980:1169" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

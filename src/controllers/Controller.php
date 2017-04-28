@@ -21,7 +21,7 @@ class Controller {
     private $data;
     function render() {
         $data ='';
-        $this->landingView = new views\views\landingPage('landingPage');
+        $this->landingView = new views\views\landing('landing');
         $this->landingView->display($data);
     }
 }

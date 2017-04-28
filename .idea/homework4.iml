@@ -5,7 +5,14 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bootstrap/css" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bootstrap/fonts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bootstrap/js" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/font-awesome/css" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/font-awesome/fonts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/font-awesome/less" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/font-awesome/scss" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -14,12 +21,26 @@
       <library name="PHP" type="php">
         <CLASSES>
           <root url="file://$APPLICATION_HOME_DIR$/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bootstrap/css" />
+          <root url="file://$MODULE_DIR$/vendor/bootstrap/fonts" />
+          <root url="file://$MODULE_DIR$/vendor/bootstrap/js" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/font-awesome/css" />
+          <root url="file://$MODULE_DIR$/vendor/font-awesome/fonts" />
+          <root url="file://$MODULE_DIR$/vendor/font-awesome/less" />
+          <root url="file://$MODULE_DIR$/vendor/font-awesome/scss" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
         </CLASSES>
         <SOURCES>
           <root url="file://$APPLICATION_HOME_DIR$/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bootstrap/css" />
+          <root url="file://$MODULE_DIR$/vendor/bootstrap/fonts" />
+          <root url="file://$MODULE_DIR$/vendor/bootstrap/js" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/font-awesome/css" />
+          <root url="file://$MODULE_DIR$/vendor/font-awesome/fonts" />
+          <root url="file://$MODULE_DIR$/vendor/font-awesome/less" />
+          <root url="file://$MODULE_DIR$/vendor/font-awesome/scss" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
         </SOURCES>
       </library>
