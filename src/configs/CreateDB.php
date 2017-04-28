@@ -9,47 +9,59 @@
 namespace HMRTeam\hw4;
 require_once("Config.php");
 
-$hostname = \HMRTeam\hw4\Config::host . ":" . \HMRTeam\hw4\Config::port;
+//$hostname = \HMRTeam\hw4\Config::host . ":" . \HMRTeam\hw4\Config::port;
 
-$db = new \mysqli($hostname, \HMRTeam\hw4\Config::user, \HMRTeam\hw4\Config::password);
+$db = new \mysqli("127.0.0.1", "root");
 
 if ($db->connect_error) {
     die('Could not connect to the database');
 }
 
-echo "successfully connection\n";
+echo "successfully connected\n";
 
-$dbCreate = 'CREATE DATABASE IF NOT EXISTS' . Config::db;
+$dbCreate = 'CREATE DATABASE spreadsheets';
 
 if ($db->query($dbCreate) == true) {
-    echo Config::db . " created \n";
-    $db->select_db(Config::db);
+    echo " created \n";
+    //$db->select_db(Config::db);
 } else {
     echo "Database could not be created" . $db->error . "\n";
     die;
 }
 
-
+mysqli_select_db($db, "spreadsheets");
 /**
  * adding actual data tables
  */
 
-$tables = [
-    "CREATE TABLE IF NOT EXISTS `sheet` (`sheet_id`(11) INT NOT NULL AUTO_INCREMENT,
-  `sheet_name` VARCHAR (255) NOT NULL,
-  `sheet_data` TEXT NOT NULL,
- ,PRIMARY KEY `sheet_id`)",
-    "CREATE TABLE IF NOT EXISTS `sheet_code` (
-      `sheet_id` INT(11) NOT NULL,
-       `hash_code` VARCHAR (30) NOT NULL, 
-       `code_type` int (11) NOT NULL,
-      )"
+$sql =
+    "CREATE TABLE sheet (
+  sheet_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  sheet_name VARCHAR (255) NOT NULL,
+  sheet_data VARCHAR (255) NOT NULL
+  )";
 
-];
 
-foreach ($tables as $table) {
+if ($db->query($sql) == true)
+    echo "table created successfully";
+else
+    echo "error inserting table";
+
+
+$sql = "CREATE TABLE sheet_code (
+      sheet_id INT(11) NOT NULL,
+       hash_code VARCHAR (30) NOT NULL, 
+       code_type int (11) NOT NULL
+      )";
+
+if ($db->query($sql) == true)
+    echo "table created successfully";
+else
+    echo "error inserting table";
+
+/*foreach ($tables as $table) {
     print ("$table ;\n");
     $outcome = \mysqli_query($db, $table);
     print ("Result: $outcome \n");
-}
+}*/
 $db->close();
