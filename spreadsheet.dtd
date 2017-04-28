@@ -1,3 +1,4 @@
-<!ELEMENT spreadsheet (row*)>
-<!ELEMENT row (col*)>
+<!ELEMENT spreadsheet (rows)>
+<!ELEMENT rows (row+)>
+<!ELEMENT row (col+)>
 <!ELEMENT col (#PCDATA)>
