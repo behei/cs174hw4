@@ -1,0 +1,17 @@
+class MainController {
+    
+    // Will display the landing page 
+    public function start() {
+        $logger = new Helper();
+        $logger->logger("Visited Landing");
+        $view = new landingview();
+        $view->render();
+    }
+    
+    // if there was an error in finding sheet display this
+    public function ifError($error, $data) {
+        $logger = new Helper();
+        $logger->logger("Landing Page with error:" . $error);
+        $view = new landingview();
+        $view->renderwitherror($error, $data);
+    }]
