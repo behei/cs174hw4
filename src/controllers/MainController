@@ -14,4 +14,45 @@ class MainController {
         $logger->logger("Landing Page with error:" . $error);
         $view = new landingview();
         $view->renderwitherror($error, $data);
-    }]
+    }
+    
+    public function view() {
+        $logger = new Helper();
+
+        if (isset($_GET['arg1']) && !empty($_GET['arg1'])) {
+            $name = trim($_GET['arg1']);
+            $var = $logger->checkName($name);
+            if (!is_string($var)) {
+                // looking for new/existing spreadsheet
+                $model = new sheet_code();
+                $result = $model->getCodeDetails($name);
+
+                if (count($result) > 0) {
+                    $results = $model->getCodes($result[0]->sheet_id);
+                    $code_type = "";
+                    $codes;
+                    foreach ($results as $r) {
+                        $codes [] = $r->hash_code;
+                        if ($name == $r->hash_code) {
+                            $code_type = $r->code_type;
+                        }
+                    }
+                    //exit
+                    if ($code_type == 0)
+                        $this->update($result[0]->sheet_name, $result[0]->sheet_data, $codes[0], $codes[1], $codes[2]);
+                    else if ($code_type == 1)
+                        $this->read($result[0]->sheet_name, $result[0]->sheet_data, $codes[0], $codes[1], $codes[2]);
+                    else if ($code_type == 2)
+                        $this->file($result[0]->sheet_name, $result[0]->sheet_data);
+                } else {
+                    $this->ifError("This hash code doesn't exist", NULL);
+                }
+            } else {
+                // error
+                $this->ifError($var, $spreadsheet_name_code);
+            }
+        } else {
+
+            $this->ifError("Name Or Code can't be empty", NULL);
+        }
+    }}
