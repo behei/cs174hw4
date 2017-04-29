@@ -1,32 +1,17 @@
 {
-  "authors": [
-    {
-      "name": "Mykhailo Behei"
+    "require": {
+        "monolog/monolog": "1.0.*"
     },
-    {
-      "name": "Richard Lack"
-    },
-    {
-      "name": "Hien Nguyen"
+    "autoload": {
+        "classmap":[
+            "src/controllers",
+            "src/models",
+            "src/views/elements",
+            "src/views/helpers",
+            "src/views/layouts"
+        ],
+        "files": [
+            "src/configs/config.php"
+        ]
     }
-
-  ],
-  "name": "acme/blog",
-  "description": "composer file",
-  "minimum-stability": "dev",
-  "license": "Apache-2.0",
-
-
-  "require": {
-    "monolog/monolog": "1.0.*"
-  },
-  "autoload": {
-    "psr-4": {
-      "HMRTeam\\hw4\\models\\": "src/models",
-      "HMRTeam\\hw4\\controllers\\": "src/controllers",
-      "HMRTeam\\hw4\\configs\\": "src/configs",
-      "HMRTeam\\hw4\\views\\": "src/views"
-    }
-  }
-
 }
