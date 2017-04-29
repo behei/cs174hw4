@@ -4,35 +4,10 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8d8fddb39099a3d63d5aa4b4aaa3f252
+class ComposerStaticInit310b995da2867fba2f6a686807da19f6
 {
-    public static $prefixLengthsPsr4 = array (
-        'H' => 
-        array (
-            'HMRTeam\\hw4\\views\\' => 18,
-            'HMRTeam\\hw4\\models\\' => 19,
-            'HMRTeam\\hw4\\controllers\\' => 24,
-            'HMRTeam\\hw4\\configs\\' => 20,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'HMRTeam\\hw4\\views\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/views',
-        ),
-        'HMRTeam\\hw4\\models\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/models',
-        ),
-        'HMRTeam\\hw4\\controllers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/controllers',
-        ),
-        'HMRTeam\\hw4\\configs\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/configs',
-        ),
+    public static $files = array (
+        '2c47924a9e512922b0cef3613348ba91' => __DIR__ . '/../..' . '/src/config/config.php',
     );
 
     public static $prefixesPsr0 = array (
@@ -45,12 +20,24 @@ class ComposerStaticInit8d8fddb39099a3d63d5aa4b4aaa3f252
         ),
     );
 
+    public static $classMap = array (
+        'MainController' => __DIR__ . '/../..' . '/src/controllers/MainController.php',
+        'Layouts' => __DIR__ . '/../..' . '/src/views/layouts/layouts.php',
+        'Helper' => __DIR__ . '/../..' . '/src/views/helpers/helper.php',
+        'apiController' => __DIR__ . '/../..' . '/src/controllers/apiController.php',
+        'dbclass' => __DIR__ . '/../..' . '/src/models/dbclass.php',
+        'filesheet' => __DIR__ . '/../..' . '/src/views/elements/filesheet.php',
+        'landingview' => __DIR__ . '/../..' . '/src/views/elements/landing.php',
+        'readsheet' => __DIR__ . '/../..' . '/src/views/elements/readsheet.php',
+        'sheet_code' => __DIR__ . '/../..' . '/src/models/sheet_code.php',
+        'updatesheet' => __DIR__ . '/../..' . '/src/views/elements/updatesheet.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8d8fddb39099a3d63d5aa4b4aaa3f252::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8d8fddb39099a3d63d5aa4b4aaa3f252::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit8d8fddb39099a3d63d5aa4b4aaa3f252::$prefixesPsr0;
+            $loader->prefixesPsr0 = ComposerStaticInit310b995da2867fba2f6a686807da19f6::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit310b995da2867fba2f6a686807da19f6::$classMap;
 
         }, null, ClassLoader::class);
     }
