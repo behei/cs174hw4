@@ -7,7 +7,7 @@ if (ENVIRONMENT == 'development' || ENVIRONMENT == 'dev') {
     ini_set("display_errors", 1);
 }
 
-define('BASE_URL', "localhost");
+define('BASE_URL', "localhost/hw4/");
 
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
