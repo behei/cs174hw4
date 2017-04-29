@@ -12,13 +12,13 @@ class updatesheet
     {
         $layout = new Layouts();
         $layout->header();
-        echo '<h1><a href="index.php?c=Home&m=index"> Web Sheets </a> '.$sheet_id.'</h1>
+        echo '<h1><a href="index.php?c=MainController&m=index"> Web Sheets </a> '.$sheet_id.'</h1>
      
-                  <b>Edit Url :</b><input type="text" value="'.BASE_URL."index.php?c=Home&m=view&arg1=".$hash_code1.'">
+                  <b>Edit Url :</b><input type="text" value="'.BASE_URL."index.php?c=MainController&m=view&arg1=".$hash_code1.'">
                 
-                    <td><b>Read Url :</b><input type="text" value="'.BASE_URL."index.php?c=Home&m=view&arg1=".$hash_code2.'">
+                    <td><b>Read Url :</b><input type="text" value="'.BASE_URL."index.php?c=MainController&m=view&arg1=".$hash_code2.'">
                 
-                    <td><b>File Url :</b><input type="text" value="'.BASE_URL."index.php?c=Home&m=view&arg1=".$hash_code3.'">
+                    <td><b>File Url :</b><input type="text" value="'.BASE_URL."index.php?c=MainController&m=view&arg1=".$hash_code3.'">
                 
                         <div id="'.$sheet_id.'"></div>
                    ';
