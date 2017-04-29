@@ -13,9 +13,9 @@ class readsheet
         $layout = new Layouts();
         $layout->header();
         echo '
-            <h1><a href="index.php?c=Home&m=index">Web Sheets</a>' . $sheet_id . '</h1>
+            <h1><a href="index.php?c=MainController&m=index">Web Sheets</a>' . $sheet_id . '</h1>
             <b>File URL:</b>
-           <input type="text" value="'.BASE_URL."index.php?c=Home&m=view&arg1=".$hash_code3.'">
+           <input type="text" value="'.BASE_URL."index.php?c=MainController&m=view&arg1=".$hash_code3.'">
         ';
 
         echo ' <script src="./src/scripts/spreadsheet.js"></script>
