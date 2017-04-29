@@ -1,0 +1,1 @@
+Setup controler for views and model handling
