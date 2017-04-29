@@ -1,30 +1,27 @@
 /**
- * Created by mishabehey on 4/18/17.
- */
-
-/**
  * Defines a class for drawing and editing spreadsheets within a tag with
  *
  * Example uses:
  * spreadsheet = new Spreadsheet(some_html_element_id,
- *     [["Tom",5],["Sally", 6]]); //read-only
+ * [["Tom",5],["Sally", 6]]); //read-only
  * spreadsheet.draw();
  *
  * spreadsheet2 = new Spreadsheet(some_html_element_id2,
- *     [["Tom",5],["Sally", 6]], {"mode":"write"}); //editable
+ * [["Tom",5],["Sally", 6]], {"mode":"write"}); //editable
  * spreadsheet2.draw();
  *
  * @param String spreadsheet_id the id of the tag in which to draw the
- *      spreadsheet
+ * spreadsheet
  * @param Array supplied_data two dimensional array of the rows and columns
- *      of data for the spreadsheet
+ * of data for the spreadsheet
  */
 function Spreadsheet(spreadsheet_id, supplied_data)
 {
+
     var self = this;
     var p = Spreadsheet.prototype;
     var properties = (typeof arguments[2] !== 'undefined') ?
-        arguments[2] : {};
+            arguments[2] : {};
     var container = document.getElementById(spreadsheet_id);
     if (!container) {
         return false;
@@ -48,14 +45,14 @@ function Spreadsheet(spreadsheet_id, supplied_data)
         data[i] = [];
         for (var j = 0; j < width; j++) {
             data[i][j] = (typeof supplied_data[i][j] == 'undefined') ? "" :
-                supplied_data[i][j];
+                    supplied_data[i][j];
         }
     }
     var property_defaults = {
-        'mode' : 'read', // currently, only supports csv
-        'data_id' : spreadsheet_id + "-data",
-        'data_name' : 'page',
-        'table_style' : 'overflow:auto;height:6in;',
+        'mode': 'read', // currently, only supports csv
+        'data_id': spreadsheet_id + "-data",
+        'data_name': 'page',
+        'table_style': 'overflow:auto;height:6in;',
     };
     for (var property_key in property_defaults) {
         if (typeof properties[property_key] !== 'undefined') {
@@ -67,7 +64,7 @@ function Spreadsheet(spreadsheet_id, supplied_data)
     /**
      * Main function used to draw the spreadsheet with the container tag
      */
-    p.draw = function()
+    p.draw = function ()
     {
         //used to draw a csv based on spreadsheet data
         var table = "<div style='" + self.table_style + "'>";
@@ -77,24 +74,24 @@ function Spreadsheet(spreadsheet_id, supplied_data)
         var delete_button = "";
         var pre_delete_button = "";
         if (self.mode == 'write') {
-            table += "<input id='" + self.data_id+ "' type='hidden' " +
-                "name='" + self.data_name + "' value='" + JSON.stringify(
-                    data)+ "' />";
+            table += "<input id='" + self.data_id + "' type='hidden' " +
+                    "name='" + self.data_name + "' value='" + JSON.stringify(
+                            data) + "' />";
             add_button = "<button>+</button>";
             pre_delete_button = "<button>-</button>";
         }
         table += "<table border='1' ><tr><th></th>";
         for (var i = 0; i < width; i++) {
             table += "<th style='min-width:1in;text-align:right;'>" +
-                delete_button + self.letterRepresentation(i) + add_button +
-                "</th>";
+                    delete_button + self.letterRepresentation(i) + add_button +
+                    "</th>";
             delete_button = pre_delete_button;
         }
         table += "</tr>";
         delete_button = "";
         for (i = 0; i < length; i++) {
-            table +="<tr><th style='min-width:1.1in;text-align:right;'>" +
-                delete_button + (i + 1) + add_button + "</th>";
+            table += "<tr><th style='min-width:1.1in;text-align:right;'>" +
+                    delete_button + (i + 1) + add_button + "</th>";
             delete_button = pre_delete_button;
             for (var j = 0; j < width; j++) {
                 var item = "";
@@ -122,11 +119,11 @@ function Spreadsheet(spreadsheet_id, supplied_data)
      * @param String cell_expression a string representing a formula to
      * calculate from a spreadsheet file
      * @param Number location character position in cell_expression to start
-     *      evaluating from
+     * evaluating from
      * @return mixed the value of the cell or the String 'NaN' if the expression
-     *    was not evaluatable
+     * was not evaluatable
      */
-    p.evaluateCell = function(cell_expression, location)
+    p.evaluateCell = function (cell_expression, location)
     {
         var out = [location, false];
         if (location >= cell_expression.length) {
@@ -134,25 +131,27 @@ function Spreadsheet(spreadsheet_id, supplied_data)
         }
         location = self.skipWhitespace(cell_expression, location);
         out[0] = location;
-        if(cell_expression.charAt(location) == "(") {
+        if (cell_expression.charAt(location) == "(") {
             left_out = self.evaluateCell(cell_expression, location + 1);
+
             if (!['+', '-', '*', '/'].includes(
                     cell_expression.charAt(left_out[0])) ||
-                typeof left_out[1] == 'String') {
+                    typeof left_out[1] == 'String') {
                 out[0] = left_out[0];
                 out[1] = "NaN";
                 return out;
             }
             right_out = self.evaluateCell(cell_expression, left_out[0] + 1);
+
             if (cell_expression.charAt(right_out[0]) != ')' ||
-                typeof right_out[1] == 'String') {
+                    typeof right_out[1] == 'String') {
                 out[0] = right_out[0];
                 out[1] = "NaN";
                 return out;
             }
             out[0] = self.skipWhitespace(cell_expression, right_out[0] + 1);
             out[1] = eval("" + left_out[1] +
-                cell_expression.charAt(left_out[0]) + right_out[1]);
+                    cell_expression.charAt(left_out[0]) + right_out[1]);
             return out;
         } else if (cell_expression.charAt(location) == "-") {
             sub_out = self.evaluateCell(cell_expression, location + 1);
@@ -160,22 +159,23 @@ function Spreadsheet(spreadsheet_id, supplied_data)
                 return sub_out;
             }
             out[0] = self.skipWhitespace(cell_expression, sub_out[0]);
-            out[1] = - sub_out[1];
+            out[1] = -sub_out[1];
             return out;
         }
+
         var rest = cell_expression.substring(location);
-        var value = rest.match(/^\-?\d+(\.\d*)?|^\-?\.\d+/);
+        var value = rest.match(/^\-?\d+(\.\d*\d:)?|^\-?\.\d+/);
         if (value !== null) {
-            out[0] = self.skipWhitespace(cell_expression,location +
-                value[0].length +1);
+            out[0] = self.skipWhitespace(cell_expression, location +
+                    value[0].length + 1);
             out[1] = (value[0].match(/\./) == '.') ? parseFloat(value[0]) :
-                parseInt(value[0]);
+                    parseInt(value[0]);
             return out;
         }
         value = rest.match(/^[A-Z]+\d+/);
         if (value !== null) {
-            out[0] = self.skipWhitespace(cell_expression,location +
-                value.length + 1);
+            out[0] = self.skipWhitespace(cell_expression, location +
+                    value.length + 1);
             var row_col = self.cellNameAsRowColumn(value.toString().trim());
             out[1] = data[row_col[0] - 1][row_col[1]];
         }
@@ -190,7 +190,7 @@ function Spreadsheet(spreadsheet_id, supplied_data)
      * @param Number location where to start search from
      * @return Number position of non-WS character
      */
-    p.skipWhitespace = function(haystack, location)
+    p.skipWhitespace = function (haystack, location)
     {
         var next_loc = haystack.substring(location).search(/\S/);
         if (next_loc > 0) {
@@ -204,13 +204,13 @@ function Spreadsheet(spreadsheet_id, supplied_data)
      * @param Number number the value to convert to base 26
      * @return String result of conversion
      */
-    p.letterRepresentation = function(number)
+    p.letterRepresentation = function (number)
     {
         var pre_letter;
         var out = "";
         do {
             pre_letter = number % 26;
-            number = Math.floor(number/26);
+            number = Math.floor(number / 26);
             out += String.fromCharCode(65 + pre_letter);
         } while (number > 25);
         return out;
@@ -223,7 +223,7 @@ function Spreadsheet(spreadsheet_id, supplied_data)
      * @param String cell_name name to convert
      * @return Array ordered pair corresponding to name
      */
-    p.cellNameAsRowColumn = function(cell_name)
+    p.cellNameAsRowColumn = function (cell_name)
     {
         var cell_parts = cell_name.match(/^([A-Z]+)(\d+)$/);
         if (cell_parts == null) {
@@ -247,32 +247,73 @@ function Spreadsheet(spreadsheet_id, supplied_data)
      * @param Object event click event object
      */
     p.updateCell = function (event) {
+
         var type = (event.target.innerHTML == "+") ? 'add' :
-            (event.target.innerHTML == "-") ? 'delete' :'cell';
+                (event.target.innerHTML == "-") ? 'delete' :
+                (event.target.type == "text") ? 'input' : 'cell';
         var target = (type == 'cell') ? event.target :
-            event.target.parentElement;
+                event.target.parentElement;
         var row = target.parentElement.rowIndex - 1;
         var column = target.cellIndex - 1;
         var length = data.length;
         var width = data[0].length;
-        var xhttp = new XMLHttpRequest(); //that was easy
-        var url = 'c=api&model=edit&data=[[tom, 5], [sally,6]]';
-        xhttp.open("POST", "./", true);
-        xhttp.send(url);
 
-        if (row >= 0 && column >= 0) {
-            var new_value = prompt(self.letterRepresentation(column) +
-                (row + 1), data[row][column]);
+        if (type == 'input') {
+            new_value = event.target.value;
+
             if (new_value != null) {
-                data[row][column] = new_value;
-                data_elt = document.getElementById(self.data_id);
-                data_elt.value = JSON.stringify(data);
-                event.target.innerHTML = new_value;
+                if (new_value.includes("avg")) {
+                    new_value = new_value.replace("avg", "");
+                    new_value = new_value.replace(/\s/g, '');
+                    var let = new_value.charAt(1);
+                    var indexb = parseInt(new_value.charAt(2));
+                    var indexe = parseInt(new_value.charAt(5));
+                    var countelement = ((indexe - indexb) + 1);
+                    var combination = "";
+                    for (var i = 1; i < countelement; i++) {
+                        combination += "(";
+                    }
+                    for (var i = indexb; i <= indexe; i++) {
+                        if (i == indexb)
+                            combination += let + i;
+                        else {
+                            combination += "+" + let + i + ")";
+                        }
+                    }
+
+                    var result = self.evaluateCell(combination, 0);
+                    new_value = (result[1]/countelement).toFixed(2);
+                     data[row][column] = new_value + "";
+                    data_elt = document.getElementById(self.data_id);
+                    data_elt.value = JSON.stringify(data);
+                    target.innerHTML = new_value;
+
+                } else {
+                    var result = self.evaluateCell(new_value, 0);
+                    if (result[1] != "NaN" && result[1] != false)
+                        new_value = result[1];
+                    data[row][column] = new_value + "";
+                    data_elt = document.getElementById(self.data_id);
+                    data_elt.value = JSON.stringify(data);
+                    target.innerHTML = new_value;
+                }
+
             }
+        }
+        if (type != 'input' && row >= 0 && column >= 0) {
+
+            var input = document.createElement('input');
+            input.setAttribute('type', 'text');
+            input.setAttribute('value', target.innerText);
+            target.innerText = "";
+            target.appendChild(input);
+            input.focus();
+           
+
         } else if (type == 'add' && row == -1 && column >= 0) {
             for (var i = 0; i < length; i++) {
                 for (var j = width; j > column + 1; j--) {
-                    data[i][j] = data[i][j-1];
+                    data[i][j] = data[i][j - 1];
                 }
                 data[i][column + 1] = "";
             }
@@ -294,7 +335,7 @@ function Spreadsheet(spreadsheet_id, supplied_data)
             self.draw();
         } else if (type == 'delete' && row == -1 && column >= 0) {
             for (var i = 0; i < length; i++) {
-                for (var j = column ; j < width - 1; j++) {
+                for (var j = column; j < width - 1; j++) {
                     data[i][j] = data[i][j + 1];
                 }
                 data[i].pop();
@@ -311,33 +352,17 @@ function Spreadsheet(spreadsheet_id, supplied_data)
             data_elt.value = JSON.stringify(data);
             self.draw();
         }
+
+        var json_upload = "sheetdata=" + JSON.stringify(data) + "&sheetname=" + spreadsheet_id;
+        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+        xmlhttp.open("POST", "index.php?c=apiController&m=update", true);
+        xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlhttp.send(json_upload);
+
         event.stopPropagation();
         event.preventDefault();
-    }
-
-    /**
-     * method to calculate the average of cells as described in (s)
-     * spreadsheet.js should be extended to accept expressions like =avg(A1:A10)
-     * which would compute the average value of A1, A2, ...., A10.
-     */
-    p.calculateCellAve = function (cell_expression, location) {
-
-
     }
     if (this.mode == 'write') {
         container.addEventListener("click", self.updateCell, true);
     }
-}
-
-function editSheet(data) {
-    var editSheet = new Spreadsheet('sheet_data', data);
-    editSheet.mode = 'write';
-    editSheet.draw();
-}
-
-function readSheet() {
-    var readSheet = new Spreadsheet('sheet_data',
-    [["Tom",5], ["Sally"], 6]); //testing purposes
-    readSheet.mode = 'read';
-    readSheet.draw();
 }
